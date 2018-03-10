@@ -1,7 +1,7 @@
 temp:	main.o Vagon.o Item.o Bomba.o Espina.o Normal.o V.o Tren.o Invisible.o Player.o Bot.o Escenarios.o Casilla.o Obstaculo.o 
-		g++ main.o Vagon.o Item.o Bomba.o Espina.o Normal.o V.o Tren.o Invisible.o Player.o Bot.o Escenarios.o Casilla.o Obstaculo.o -o temp
+		g++ main.o Vagon.o Item.o Bomba.o Espina.o Normal.o V.o Tren.o Invisible.o Player.o Bot.o Escenarios.o Casilla.o Obstaculo.o -o temp -lncurses
 main.o:	main.cpp Escenarios.h Invisible.h Tren.h Item.h Bomba.h Vagon.h V.h Espina.h Normal.h Player.h Bot.h Casilla.h Obstaculo.h
-		g++ -c main.cpp
+		g++ -c main.cpp 
 Escenarios.o:	Escenarios.cpp Escenarios.h Item.h
 		g++ -c Escenarios.cpp
 Vagon.o:	Vagon.cpp Vagon.h Item.h

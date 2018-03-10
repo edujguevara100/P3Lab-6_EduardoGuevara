@@ -5,21 +5,22 @@
 #include "Bot.h"
 #include "Vagon.h"
 #include <iostream>
-Tren::Tren(){
-
+#include <string>
+Tren::Tren(string name){
+	fillPista(name);
 }
 Vagon* Tren::getVagon(){
 	return vagon;	
 }
 
-void Tren::fillPista(){
+void Tren::fillPista(string name){
 	pista = new Item**[11];
 	for(int i = 0; i < 11; i++){
 		pista[i] = new Item*[13];
 	}
 
 	pista[7][4] = new Vagon('v',4,7);
-	pista[0][0] = new Player('p',0,0);
+	pista[0][0] = new Player('p',0,0,name);
 	pista[10][12] = new Bot('b',12,10);
 	pista[0][12] = new Bot('b',12,0);
 	pista[10][0] = new Bot('b',0,10);

@@ -10,6 +10,8 @@ class Bot: public Item{
 		bool vivo;
 		int contb;
 	public:
+		int getCordx();
+		int getCordy();
 		bool isVivo();
 		Bot(char,int,int);
 		void mover();

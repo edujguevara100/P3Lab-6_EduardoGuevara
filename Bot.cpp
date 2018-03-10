@@ -8,7 +8,12 @@ Bot::Bot(char ident, int posx,int posy):Item(ident){
 	cordx = posx;
 	cordy = posy;
 }
-
+int Bot::getCordx(){
+	return cordx;
+}
+int Bot::getCordy(){
+	return cordy;
+}
 void Bot::mover(){
 	srand(time(NULL));
 	int ran;

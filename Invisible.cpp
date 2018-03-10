@@ -4,11 +4,13 @@
 #include "Bot.h"
 #include "Player.h"
 #include <iostream>
+#include <string>
+using namespace std;
 Invisible::Invisible(){
 
 }
 
-void Invisible::fillPista(){
+void Invisible::fillPista(string name){
 	pista = new Item**[11];
 	for(int j = 0; j < 11; j++){
 		pista[j] = new Item*[13];
@@ -27,7 +29,7 @@ void Invisible::fillPista(){
 			}
 		}
 	}
-	pista[0][0] = new Player('p',0,0);
+	pista[0][0] = new Player('p',0,0,name);
 	pista[10][0] = new Bot('b',0,10);
 	pista[0][12] = new Bot('b',12,0);
 	pista[10][12] = new Bot('b',12,10);

@@ -1,10 +1,12 @@
 #include "Player.h"
 #include <string>
 #include <iostream>
+#include <string>
 using namespace std;
-Player::Player(char ident, int posx, int posy): Item(ident){
+Player::Player(char ident, int posx, int posy, string nombre): Item(ident){
 	cordx = posx;
 	cordy = posy;
+	this->nombre = nombre;
 }
 bool Player::isVivo(){
 	return vivo;

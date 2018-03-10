@@ -3,7 +3,7 @@ Escenarios::Escenarios(){
 
 }
 
-void Escenarios::fillPista(){
+void Escenarios::fillPista(string name){
 	
 }
 
